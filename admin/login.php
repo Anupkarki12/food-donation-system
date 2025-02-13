@@ -137,33 +137,25 @@ if(isset($_POST['signup']))
                     <div class="input-field">
                         <!-- <label for="district">District:</label> -->
                         <select id="district" name="district" style="padding:10px; padding-left: 20px;">
-                          <option value="chennai">Chennai</option>
-                          <option value="kancheepuram">Kancheepuram</option>
-                          <option value="thiruvallur">Thiruvallur</option>
-                          <option value="vellore">Vellore</option>
-                          <option value="tiruvannamalai">Tiruvannamalai</option>
-                          <option value="tiruvallur">Tiruvallur</option>
-                          <option value="tiruppur">Tiruppur</option>
-                          <option value="coimbatore">Coimbatore</option>
-                          <option value="erode">Erode</option>
-                          <option value="salem">Salem</option>
-                          <option value="namakkal">Namakkal</option>
-                          <option value="tiruchirappalli">Tiruchirappalli</option>
-                          <option value="thanjavur">Thanjavur</option>
-                          <option value="pudukkottai">Pudukkottai</option>
-                          <option value="karur">Karur</option>
-                          <option value="ariyalur">Ariyalur</option>
-                          <option value="perambalur">Perambalur</option>
-                          <option value="madurai" selected>Madurai</option>
-                          <option value="virudhunagar">Virudhunagar</option>
-                          <option value="dindigul">Dindigul</option>
-                          <option value="ramanathapuram">Ramanathapuram</option>
-                          <option value="sivaganga">Sivaganga</option>
-                          <option value="thoothukkudi">Thoothukkudi</option>
-                          <option value="tirunelveli">Tirunelveli</option>
-                          <option value="tiruppur">Tiruppur</option>
-                          <option value="tenkasi">Tenkasi</option>
-                          <option value="kanniyakumari">Kanniyakumari</option>
+                          
+                          <option value="Bhaktapur">Bhaktapur</option>
+                          <option value="Lalitpur">Lalitpur</option>
+                          <option value="Chitwan">Chitwan</option>
+                          <option value="Dhading">Dhading</option>
+                          <option value="Dolakha">Dolakha</option>
+                          <option value="Nuwakot">Nuwakot</option>
+                          <option value="Ramechhap">Ramechhap</option>
+                          <option value="Rasuwa">Rasuwa</option>
+                          <option value="Sindhuli">Sindhuli</option>
+                          <option value="Sindhupalchowk">Sindhupalchowk</option>
+                          <option value="Janakpur">Janakpur</option>
+                          <option value="Banke">Banke</option>
+                          <option value="Bardiya">Bardiya</option>
+                          <option value="Dhankuta">Dhankuta</option>
+                          <option value="Illam">Illam</option>
+                          <option value="Jhapa">Jhapa</option>
+                          <option value="kathmandu" selected>Kathmandu</option>
+                          
                         </select> 
                         
 

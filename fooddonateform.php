@@ -6,7 +6,7 @@ if($_SESSION['name']==''){
 // include("login.php"); 
 $emailid= $_SESSION['email'];
 $connection=mysqli_connect("localhost","root","");
-$db=mysqli_select_db($connection,'demo');
+$db=mysqli_select_db($connection,'food management');
 if(isset($_POST['submit']))
 {
     $foodname=mysqli_real_escape_string($connection, $_POST['foodname']);
@@ -18,13 +18,14 @@ if(isset($_POST['submit']))
     $district=mysqli_real_escape_string($connection, $_POST['district']);
     $address=mysqli_real_escape_string($connection, $_POST['address']);
     $name=mysqli_real_escape_string($connection, $_POST['name']);
+    $expiry=mysqli_real_escape_string($connection, $_POST['expiry']);
   
 
  
 
 
 
-    $query="insert into food_donations(email,food,type,category,phoneno,location,address,name,quantity) values('$emailid','$foodname','$meal','$category','$phoneno','$district','$address','$name','$quantity')";
+    $query="insert into food_donations(email,food,type,category,phoneno,location,address,name,quantity,expiry) values('$emailid','$foodname','$meal','$category','$phoneno','$district','$address','$name','$quantity','$expiry')";
     $query_run= mysqli_query($connection, $query);
     if($query_run)
     {
@@ -89,10 +90,12 @@ if(isset($_POST['submit']))
             </label>
           </div>
           <br>
+          <label for="expiry-date">Expiry Date:</label>
+        <input type="date" id="expiry-date" name="expiry" required>
         <!-- <input type="text" id="food" name="food"> -->
         </div>
         <div class="input">
-        <label for="quantity">Quantity:(number of person /kg)</label>
+        <label for="quantity">Quantity:(kg/pcs)</label>
         <input type="text" id="quantity" name="quantity" required/>
         </div>
        <b><p style="text-align: center;">Contact Details</p></b>
@@ -115,33 +118,10 @@ if(isset($_POST['submit']))
         <label for="location"></label>
         <label for="district">District:</label>
 <select id="district" name="district" style="padding:10px;">
-  <option value="chennai">Chennai</option>
-  <option value="kancheepuram">Kancheepuram</option>
-  <option value="thiruvallur">Thiruvallur</option>
-  <option value="vellore">Vellore</option>
-  <option value="tiruvannamalai">Tiruvannamalai</option>
-  <option value="tiruvallur">Tiruvallur</option>
-  <option value="tiruppur">Tiruppur</option>
-  <option value="coimbatore">Coimbatore</option>
-  <option value="erode">Erode</option>
-  <option value="salem">Salem</option>
-  <option value="namakkal">Namakkal</option>
-  <option value="tiruchirappalli">Tiruchirappalli</option>
-  <option value="thanjavur">Thanjavur</option>
-  <option value="pudukkottai">Pudukkottai</option>
-  <option value="karur">Karur</option>
-  <option value="ariyalur">Ariyalur</option>
-  <option value="perambalur">Perambalur</option>
-  <option value="madurai" selected>Madurai</option>
-  <option value="virudhunagar">Virudhunagar</option>
-  <option value="dindigul">Dindigul</option>
-  <option value="ramanathapuram">Ramanathapuram</option>
-  <option value="sivaganga">Sivaganga</option>
-  <option value="thoothukkudi">Thoothukkudi</option>
-  <option value="tirunelveli">Tirunelveli</option>
-  <option value="tiruppur">Tiruppur</option>
-  <option value="tenkasi">Tenkasi</option>
-  <option value="kanniyakumari">Kanniyakumari</option>
+<option value="Kathmandu">Kathmandu</option>
+                          <option value="Bhaktapur">Bhaktapur</option>
+                          <option value="Lalitpur">Lalitpur</option>
+                          <option value="kathmandu" selected>Kathmandu</option>
 </select> 
 
         <label for="address" style="padding-left: 10px;">Address:</label>

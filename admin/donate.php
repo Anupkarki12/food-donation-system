@@ -26,8 +26,8 @@ if($_SESSION['name']==''){
     <title>Admin Dashboard Panel</title> 
     
 <?php
- $connection=mysqli_connect("localhost:3307","root","");
- $db=mysqli_select_db($connection,'demo');
+ $connection=mysqli_connect("localhost","root","");
+ $db=mysqli_select_db($connection,'food management');
  
 
 
@@ -123,9 +123,12 @@ if($_SESSION['name']==''){
              <label for="location" class="logo">Select Location:</label>
              <!-- <br> -->
             <select id="location" name="location">
-               <option value="chennai">chennai</option>
-               <option value="madurai">madurai</option>
-               <option value="coimbatore">coimbatore</option>
+            <option value="Bhaktapur">Bhaktapur</option>
+                          <option value="Lalitpur">Lalitpur</option>
+                           
+                          <option value="kathmandu" selected>Kathmandu</option>
+                          
+               
         
             </select>
                 <input type="submit" value="Get Details">
@@ -158,12 +161,13 @@ if($_SESSION['name']==''){
         <th>date/time</th>
         <th>address</th>
         <th>Quantity</th>
+         <th>Expiry date</th>
         
     </tr>
     </thead><tbody>";
 
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td data-label=\"name\">".$row['name']."</td><td data-label=\"food\">".$row['food']."</td><td data-label=\"category\">".$row['category']."</td><td data-label=\"phoneno\">".$row['phoneno']."</td><td data-label=\"date\">".$row['date']."</td><td data-label=\"Address\">".$row['address']."</td><td data-label=\"quantity\">".$row['quantity']."</td></tr>";
+            echo "<tr><td data-label=\"name\">".$row['name']."</td><td data-label=\"food\">".$row['food']."</td><td data-label=\"category\">".$row['category']."</td><td data-label=\"phoneno\">".$row['phoneno']."</td><td data-label=\"date\">".$row['date']."</td><td data-label=\"Address\">".$row['address']."</td><td data-label=\"quantity\">".$row['quantity']."</td></td><td data-label=\"expiry\">".$row['expiry']."</td></tr>";
 
         //   echo "<tr><td>" . $row["name"] . "</td><td>" . $row["phoneno"] . "</td><td>" . $row["location"] . "</td></tr>";
         }

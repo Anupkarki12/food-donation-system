@@ -2,7 +2,7 @@
 <?php
 ob_start(); 
 // $connection = mysqli_connect("localhost:3307", "root", "");
-// $db = mysqli_select_db($connection, 'demo');
+// $db = mysqli_select_db($connection, 'food management');
  include("connect.php"); 
 if($_SESSION['name']==''){
 	header("location:signin.php");
@@ -26,8 +26,8 @@ if($_SESSION['name']==''){
     <title>Admin Dashboard Panel</title> 
     
 <?php
- $connection=mysqli_connect("localhost:3307","root","");
- $db=mysqli_select_db($connection,'demo');
+ $connection=mysqli_connect("localhost","root","");
+ $db=mysqli_select_db($connection,'food management');
  
 
 
@@ -232,6 +232,8 @@ if (isset($_POST['food']) && isset($_POST['delivery_person_id'])) {
             <th>date/time</th>
             <th>address</th>
             <th>Quantity</th>
+            <th>Expiry date</th>
+
             <!-- <th>Action</th> -->
          
           
@@ -241,7 +243,7 @@ if (isset($_POST['food']) && isset($_POST['delivery_person_id'])) {
        <tbody>
 
         <?php foreach ($data as $row) { ?>
-        <?php    echo "<tr><td data-label=\"name\">".$row['name']."</td><td data-label=\"food\">".$row['food']."</td><td data-label=\"category\">".$row['category']."</td><td data-label=\"phoneno\">".$row['phoneno']."</td><td data-label=\"date\">".$row['date']."</td><td data-label=\"Address\">".$row['address']."</td><td data-label=\"quantity\">".$row['quantity']."</td>";
+        <?php    echo "<tr><td data-label=\"name\">".$row['name']."</td><td data-label=\"food\">".$row['food']."</td><td data-label=\"category\">".$row['category']."</td><td data-label=\"phoneno\">".$row['phoneno']."</td><td data-label=\"date\">".$row['date']."</td><td data-label=\"Address\">".$row['address']."</td><td data-label=\"quantity\">".$row['quantity']."</td><td data-label=\"expiry\">".$row['expiry']."</td>";
 ?>
         
             <!-- <td><?= $row['Fid'] ?></td>
